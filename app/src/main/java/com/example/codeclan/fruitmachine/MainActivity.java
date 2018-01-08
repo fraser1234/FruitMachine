@@ -83,3 +83,4 @@ public class MainActivity extends AppCompatActivity {
     // oncreate menu option to contain rules, how to play etc.
 
 }
+    }
