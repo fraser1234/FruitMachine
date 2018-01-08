@@ -136,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
 
                     spin5.start();
 
+                    button.setText("Stop");
+                    result.setText("");
+                    gameStarted = true;
+
                 }
             }
 
