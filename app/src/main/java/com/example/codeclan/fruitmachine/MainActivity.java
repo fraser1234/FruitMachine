@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
                     button.setText("Go!");
                     gameStarted = false;
 
-                    
+
                 } else {
 
-                    spin1 = new Spin(new Spin(0, 0, 0, ) {
+                    spin1 = new Spin(0, 0, 0) {
                         @Override
                         public void newImage(final int image) {
                             runOnUiThread(new Runnable() {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
                                 }
                             });
                         }
-                    }, 50, randomInt(0, 100));// random section figure this out
+                    }, 50, randomInt(0, 100);
 
                     spin1.start();
 
@@ -86,5 +86,6 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
             // oncreate menu option to contain rules, how to play etc.
 
         });
+
     }
 }
