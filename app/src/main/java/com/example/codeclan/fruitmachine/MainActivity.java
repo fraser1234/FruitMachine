@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
 
     public static final Random RANDOM = new Random();
 
-    public static long randomLong(int lower, int upper) {
+    public static long randomInt(int lower, int upper) {
         return lower + (long) (RANDOM.nextDouble() * (upper - lower));
     }
 
@@ -32,20 +32,20 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
         images3 = (ImageView) findViewById(R.id.image3);
         images4 = (ImageView) findViewById(R.id.image4);
         images5 = (ImageView) findViewById(R.id.image5);
-        result = (TextView)findViewById(R.id.result);
-        button = (Button)findViewById(R.id.button);
+        result = (TextView) findViewById(R.id.result);
+        button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(gameStarted){
+                if (gameStarted) {
                     spin1.stopSpin();
                     spin2.stopSpin();
                     spin3.stopSpin();
                     spin4.stopSpin();
                     spin5.stopSpin();
 
-                    if(spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex){
+                    if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
                         result.setText("Congratulations! you have won 5 of the Queens finest British Pounds!!!"); // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
@@ -53,33 +53,38 @@ public class MainActivity extends AppCompatActivity implements SpinLoader{
                             || spin1.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
                             || spin1.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
-                            || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex){
+                            || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
                         result.setText("So Close! Three Correct! for that effort you collect 3 of the Queens British Pounds"); // enter counter here to tally 3 onto the score
-                    }else{
+                    } else {
                         result.setText("You didnt manage to match three fruits, try again!!!");
                     }
 
                     button.setText("Go!");
                     gameStarted = false;
-            }   else {
 
-                spin1 = new Spin(new SpinLoader(){
-                    @Override
-                    public void newImage(final int img) {
-                        runOnUiThread(new Runnable(){
-                            @Override
-                            public void run(){
-                                images1.setImageResource(image);
-                            }
-                        });
-                    }
-                },50, randomLong(0, 100));// random section figure this out
+                    
+                } else {
+
+                    spin1 = new Spin(new Spin(0, 0, 0, ) {
+                        @Override
+                        public void newImage(final int image) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    images1.setImageResource(image);
+                                }
+                            });
+                        }
+                    }, 50, randomInt(0, 100));// random section figure this out
+
+                    spin1.start();
 
 
+                }
+            }
 
-        };
+            // oncreate menu option to contain rules, how to play etc.
+
+        });
     }
-
-    // oncreate menu option to contain rules, how to play etc.
-
-}}
+}

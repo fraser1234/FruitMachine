@@ -6,6 +6,6 @@ package com.example.codeclan.fruitmachine;
 
 public interface SpinLoader {
 
-    void newImage(int images);
+    void newImage(int image);
 
 }
