@@ -4,7 +4,11 @@ package com.example.codeclan.fruitmachine;
  * Created by fraserblack on 07/01/2018.
  */
 // thread is a thread of execution within a program, uses the run method
-public class Spin extends Thread implements SpinLoader{
+public class Spin extends Thread {
+
+    interface SpinLoader {
+        void newImage(int image);
+    }
 
     //abstract class for spin is not working. throws up major error in the main activty, however needs to be abstract to use the interface??? interface can be contained within the class which means it doesnt have to be abstract
 
@@ -13,14 +17,16 @@ public class Spin extends Thread implements SpinLoader{
     public int spinTime;
     public int startGame;
     public boolean gameStarted;
+    public SpinLoader spinLoader;
 
 
 
-    public Spin(int currentIndex, int spinTime, int startGame){
+    public Spin(SpinLoader spinLoader, int spinTime, int startGame){
         this.currentIndex = 0;
         this.gameStarted = true;
         this.spinTime = spinTime;
         this.startGame = startGame;
+        this.spinLoader = spinLoader;
     }
 
     //thread.sleep acts as a delay method in java
