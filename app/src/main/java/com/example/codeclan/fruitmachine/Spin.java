@@ -3,15 +3,10 @@ package com.example.codeclan.fruitmachine;
 /**
  * Created by fraserblack on 07/01/2018.
  */
+// thread is a thread of execution within a program, uses the run method
+public abstract class Spin extends Thread implements SpinLoader{
 
-public class Spin extends Thread {
-
-    // nested interface or normal interface?
-    interface SpinLoader{
-        void newImage(int images);
-    }
-
-    private  static int[] images = {};
+    private  static int[] images = {R.drawable.fruitgrape, R.drawable.fruitcherry, R.drawable.fruitseven, R.drawable.fruitbell, R.drawable.fruitbar, R.drawable.fruitbanana };
     public int currentIndex;
     public int spinTime;
     public int startGame;
@@ -27,7 +22,7 @@ public class Spin extends Thread {
         this.spinLoader = spinLoader;
     }
 
-    //play method look up what a try loop does
+    //thread.sleep acts as a delay method in java
     public void run() {
         try {
             Thread.sleep(startGame);

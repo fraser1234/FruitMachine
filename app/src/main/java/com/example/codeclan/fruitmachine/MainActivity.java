@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SpinLoader{
 
     private TextView result;
     private ImageView images1, images2, images3, images4, images5;
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     gameStarted = false;
             }   else {
 
-                spin1 = new Spin(new Spin.SpinLoader(){
+                spin1 = new Spin(new SpinLoader(){
                     @Override
                     public void newImage(final int img) {
                         runOnUiThread(new Runnable(){
@@ -82,5 +82,4 @@ public class MainActivity extends AppCompatActivity {
 
     // oncreate menu option to contain rules, how to play etc.
 
-}
-    }
+}}
