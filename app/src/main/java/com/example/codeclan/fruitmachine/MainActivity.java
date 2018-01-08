@@ -80,6 +80,62 @@ public class MainActivity extends AppCompatActivity {
 
                     spin1.start();
 
+                    spin2 = new Spin(new Spin.SpinLoader() {
+                        @Override
+                        public void newImage(final int image) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run(){
+                                    images2.setImageResource(image);
+                                }
+                            });
+                        }
+                    }, 50, (int) randomInt(0, 100));
+
+                    spin2.start();
+
+                    spin3 = new Spin(new Spin.SpinLoader() {
+                        @Override
+                        public void newImage(final int image) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run(){
+                                    images3.setImageResource(image);
+                                }
+                            });
+                        }
+                    }, 50, (int) randomInt(0, 100));
+
+                    spin3.start();
+
+                    spin4 = new Spin(new Spin.SpinLoader() {
+                        @Override
+                        public void newImage(final int image) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run(){
+                                    images4.setImageResource(image);
+                                }
+                            });
+                        }
+                    }, 50, (int) randomInt(0, 100));
+
+                    spin4.start();
+
+                    spin5 = new Spin(new Spin.SpinLoader() {
+                        @Override
+                        public void newImage(final int image) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run(){
+                                    images5.setImageResource(image);
+                                }
+                            });
+                        }
+                    }, 50, (int) randomInt(0, 100));
+
+                    spin5.start();
+
                 }
             }
 
