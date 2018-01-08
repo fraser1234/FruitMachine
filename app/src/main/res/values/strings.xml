@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FruitMachine</string>
+    <string name="explain_rules">Rules</string>
 </resources>
