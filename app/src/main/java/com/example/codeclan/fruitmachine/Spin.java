@@ -7,7 +7,7 @@ package com.example.codeclan.fruitmachine;
 public class Spin extends Thread {
 
     interface SpinLoader {
-        void newImage(int image);
+        void newImage(int image); // dont know why this is wokring, but it does so leave it alone
     }
 
     //abstract class for spin is not working. throws up major error in the main activty, however needs to be abstract to use the interface??? interface can be contained within the class which means it doesnt have to be abstract
@@ -44,7 +44,9 @@ public class Spin extends Thread {
 
             nextImage();
 
-            newImage(images[currentIndex]); // need to decide about interface
+            if(spinLoader != null){
+            spinLoader.newImage(images[currentIndex]);
+            }
     }
     }
 
