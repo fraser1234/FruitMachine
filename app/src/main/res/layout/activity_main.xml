@@ -88,18 +88,17 @@
     <TextView
         android:id="@+id/result"
         android:layout_width="261dp"
-        android:layout_height="110dp"
+        android:layout_height="142dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/images3"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintVertical_bias="0.882" />
 
     <Button
         android:id="@+id/button"
@@ -108,13 +107,13 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:onClick="onPlayButtonClick"
+        android:onClick="onClick"
         android:text="Go!"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/images3"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.815" />
 
 </android.support.constraint.ConstraintLayout>
