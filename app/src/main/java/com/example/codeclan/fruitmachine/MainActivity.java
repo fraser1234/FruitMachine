@@ -161,14 +161,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId() == R.id.tell_rules){
-            Toast.makeText(MainActivity.this, "These are the rules" , Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "So Simple! All you have to do is click go and then after your desired length of time, press STOP and see how much money you have won!!!" , Toast.LENGTH_LONG).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
-
-
-
-
-
     }
 }
