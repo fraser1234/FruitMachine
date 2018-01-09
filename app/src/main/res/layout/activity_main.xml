@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/fruitgrape" />
+        app:srcCompat="@drawable/fruitgrape1" />
 
     <ImageView
         android:id="@+id/images2"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toEndOf="@+id/images1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/fruitgrape" />
+        app:srcCompat="@drawable/fruitgrape1" />
 
     <ImageView
         android:id="@+id/images3"
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toEndOf="@+id/images2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/fruitgrape" />
+        app:srcCompat="@drawable/fruitgrape1" />
 
     <ImageView
         android:id="@+id/images4"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toEndOf="@+id/images3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/fruitgrape" />
+        app:srcCompat="@drawable/fruitgrape1" />
 
     <ImageView
         android:id="@+id/images5"
@@ -85,7 +85,7 @@
         app:layout_constraintStart_toEndOf="@+id/images4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397"
-        app:srcCompat="@drawable/fruitgrape" />
+        app:srcCompat="@drawable/fruitgrape1" />
 
 
     <TextView

@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         scoreCounter.setText("3");// enter counter here to tally 3 onto the score
                     } else {
                         result.setText("You didnt manage to match three fruits, try again!!!");
+                        scoreCounter.setText("0");
                     }
 
                     button.setText("Go!");

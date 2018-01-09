@@ -12,7 +12,7 @@ public class Spin extends Thread {
 
     //abstract class for spin is not working. throws up major error in the main activty, however needs to be abstract to use the interface??? interface can be contained within the class which means it doesnt have to be abstract
 
-    private  static int[] images = {R.drawable.fruitgrape, R.drawable.fruitcherry, R.drawable.fruitseven, R.drawable.fruitbell, R.drawable.fruitbar, R.drawable.fruitbanana };
+    private  static int[] images = {R.drawable.fruitgrape1, R.drawable.fruitcherry, R.drawable.fruitseven, R.drawable.fruitbell, R.drawable.fruitbar, R.drawable.fruitbanana };
     public int currentIndex;
     public int spinTime;
     public int startGame;
