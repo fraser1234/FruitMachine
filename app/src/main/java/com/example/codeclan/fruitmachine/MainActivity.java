@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Spin spin1, spin2, spin3, spin4, spin5;
     private Button button;
     private boolean gameStarted;
+    private Counter counter;
 
     public static final Random RANDOM = new Random();
 
