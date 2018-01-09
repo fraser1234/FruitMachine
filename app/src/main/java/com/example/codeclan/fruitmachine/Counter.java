@@ -12,7 +12,7 @@ public class Counter {
         this.winnings = 0;
     }
 
-    public int getWinnings() {
+    public Integer getWinnings() {
         return this.winnings;
     }
 

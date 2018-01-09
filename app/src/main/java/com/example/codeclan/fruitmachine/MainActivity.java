@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private boolean gameStarted;
     private TextView scoreCounter;
+    private Counter counter;
 
     public static final Random RANDOM = new Random();
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         images3 = (ImageView) findViewById(R.id.images3);
         images4 = (ImageView) findViewById(R.id.images4);
         images5 = (ImageView) findViewById(R.id.images5);
+        counter = new Counter();
 
 
 
@@ -55,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
                         result.setText("Congratulations! you matched all 5!");
-                        scoreCounter.setText("5");// enter the counter here so that it can tally the amount mamde in each game
+                        counter.increaseByFive();
+                        scoreCounter.setText(counter.getWinnings().toString());
+                        // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
                             || spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
@@ -64,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
                         result.setText("So Close! Three Correct!");
-                        scoreCounter.setText("3");// enter counter here to tally 3 onto the score
+                        counter.increaseByThree();
+                        scoreCounter.setText(counter.getWinnings().toString());// enter counter here to tally 3 onto the score
                     } else {
                         result.setText("You didnt manage to match three fruits, try again!!!");
-                        scoreCounter.setText("0");
                     }
 
                     button.setText("Go!");
