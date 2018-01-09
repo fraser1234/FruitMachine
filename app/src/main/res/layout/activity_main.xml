@@ -204,4 +204,14 @@
         app:layout_constraintTop_toBottomOf="@+id/images5"
         app:layout_constraintVertical_bias="0.97" />
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="105dp"
+        android:layout_height="31dp"
+        android:text="Winnings:"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="381dp" />
+
 </android.support.constraint.ConstraintLayout>
