@@ -24,7 +24,11 @@ public class Counter {
     public int increaseByThree() {
         winnings += 3;
         return this.getWinnings();
+    }
 
+    public int increaseByFour(){
+        winnings += 4;
+        return this.getWinnings();
     }
 
     public int increaseByFive() {

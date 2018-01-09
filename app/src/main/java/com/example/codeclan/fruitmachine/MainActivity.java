@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     spin5.stopSpin();
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("Congratulations! you matched all 5!");
+                        result.setText("Congratulations! you matched all 5! You Win £5!");
                         counter.increaseByFive();
                         scoreCounter.setText(counter.getWinnings().toString());
                         // enter the counter here so that it can tally the amount mamde in each game
@@ -66,12 +66,15 @@ public class MainActivity extends AppCompatActivity {
                             || spin1.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
                             || spin1.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
-                            || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("So Close! Three Correct!");
+                            || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
+                            || spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin5.currentIndex
+                            || spin1.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
+                            || spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin4.currentIndex) {
+                        result.setText("So Close! Three Correct! You Win £3");
                         counter.increaseByThree();
                         scoreCounter.setText(counter.getWinnings().toString());// enter counter here to tally 3 onto the score
                     } else {
-                        result.setText("You didnt manage to match three fruits, try again!!!");
+                        result.setText("You didnt manage to match three fruits, try again!");
                     }
 
                     button.setText("Go!");
@@ -91,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                         }
-                    }, 50, (int) randomInt(0, 100));
+                    }, 47, (int) randomInt(0, 100));
 
                     spin1.start();
 
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 50, (int) randomInt(0, 100));
+                    }, 48, (int) randomInt(0, 100));
 
                     spin2.start();
 
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 50, (int) randomInt(0, 100));
+                    }, 49, (int) randomInt(0, 100));
 
                     spin3.start();
 
@@ -147,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 50, (int) randomInt(0, 100));
+                    }, 51, (int) randomInt(0, 100));
 
                     spin5.start();
 
