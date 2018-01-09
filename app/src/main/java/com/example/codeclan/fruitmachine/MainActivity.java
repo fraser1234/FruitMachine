@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Spin spin1, spin2, spin3, spin4, spin5;
     private Button button;
     private boolean gameStarted;
-    private Counter counter;
+    private TextView scoreCounter;
 
     public static final Random RANDOM = new Random();
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         result = (TextView) findViewById(R.id.result);
         button = (Button) findViewById(R.id.button);
+        scoreCounter = (TextView)findViewById(R.id.scoreCounter);
         images1 = (ImageView) findViewById(R.id.images1);
         images2 = (ImageView) findViewById(R.id.images2);
         images3 = (ImageView) findViewById(R.id.images3);
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     spin5.stopSpin();
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("Congratulations! you matched all 5!");// enter the counter here so that it can tally the amount mamde in each game
+                        result.setText("Congratulations! you matched all 5!");
+                        scoreCounter.setText("5");// enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
                             || spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
@@ -61,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
                             || spin1.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("So Close! Three Correct!"); // enter counter here to tally 3 onto the score
+                        result.setText("So Close! Three Correct!");
+                        scoreCounter.setText("3");// enter counter here to tally 3 onto the score
                     } else {
                         result.setText("You didnt manage to match three fruits, try again!!!");
                     }
