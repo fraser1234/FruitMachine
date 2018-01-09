@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     spin5.stopSpin();
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("Congratulations! you have won 5 of the Queens finest British Pounds!!!");// enter the counter here so that it can tally the amount mamde in each game
+                        result.setText("Congratulations! you matched all 5!");// enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
                             || spin3.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                             || spin1.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin5.currentIndex
                             || spin2.currentIndex == spin4.currentIndex && spin4.currentIndex == spin5.currentIndex) {
-                        result.setText("So Close! Three Correct! for that effort you collect 3 of the Queens British Pounds"); // enter counter here to tally 3 onto the score
+                        result.setText("So Close! Three Correct!"); // enter counter here to tally 3 onto the score
                     } else {
                         result.setText("You didnt manage to match three fruits, try again!!!");
                     }
