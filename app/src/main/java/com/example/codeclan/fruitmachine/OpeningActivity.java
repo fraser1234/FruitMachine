@@ -11,6 +11,7 @@ public class OpeningActivity extends AppCompatActivity {
 
     private TextView selectGame;
     private Button fruitMachineButton;
+    private Button cardMachineButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +20,16 @@ public class OpeningActivity extends AppCompatActivity {
 
         selectGame = (TextView) findViewById(R.id.selectGame);
         fruitMachineButton = (Button) findViewById(R.id.fruitMachineButton);
+        cardMachineButton = (Button) findViewById(R.id.cardMachineButton);
     }
 
     public void onFruitMachineButtonClick(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void onCardMachineButtonClick(View view) {
+        Intent intent = new Intent(this, CardGameActivity.class);
         startActivity(intent);
     }
 

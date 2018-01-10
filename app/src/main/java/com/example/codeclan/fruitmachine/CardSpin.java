@@ -12,7 +12,7 @@ public class CardSpin extends Thread {
 
     //abstract class for spin is not working. throws up major error in the main activty, however needs to be abstract to use the interface??? interface can be contained within the class which means it doesnt have to be abstract
 
-    private  static int[] images = {R.drawable.cardsuit, R.drawable.cardheart, R.drawable.carddiamond, R.drawable.cardclubs };
+    private  static int[] cardimages = {R.drawable.cardsuit, R.drawable.cardheart, R.drawable.carddiamond, R.drawable.cardclubs };
     public int currentIndex;
     public int spinTime;
     public int startGame;
@@ -45,7 +45,7 @@ public class CardSpin extends Thread {
             nextImage();
 
             if(spinLoader != null){
-                spinLoader.newImage(images[currentIndex]);
+                spinLoader.newImage(cardimages[currentIndex]);
             }
         }
     }
@@ -64,7 +64,7 @@ public class CardSpin extends Thread {
     public void nextImage(){
         currentIndex++;
 
-        if(currentIndex == images.length){
+        if(currentIndex == cardimages.length){
             currentIndex = 0;
         }
 
