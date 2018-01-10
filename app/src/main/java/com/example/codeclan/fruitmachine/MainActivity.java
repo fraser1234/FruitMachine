@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                         }
-                    }, 47, (int) randomInt(0, 100));
+                    }, 50, (int) randomInt(0, 100));
 
                     spin1.start();
 
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 48, (int) randomInt(0, 100));
+                    }, 50, (int) randomInt(0, 100));
 
                     spin2.start();
 
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 49, (int) randomInt(0, 100));
+                    }, 50, (int) randomInt(0, 100));
 
                     spin3.start();
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                         }
-                    }, 51, (int) randomInt(0, 100));
+                    }, 50, (int) randomInt(0, 100));
 
                     spin5.start();
 

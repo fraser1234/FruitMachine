@@ -11,6 +11,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override
@@ -19,4 +20,5 @@ public class MenuActivity extends AppCompatActivity {
         menuInflater.inflate(R.menu.activity_main, menu);
         return true;
     }
+
 }

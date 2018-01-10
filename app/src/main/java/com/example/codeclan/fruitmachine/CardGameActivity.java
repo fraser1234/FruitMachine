@@ -3,10 +3,14 @@ package com.example.codeclan.fruitmachine;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -18,6 +22,7 @@ public class CardGameActivity extends AppCompatActivity {
     private CardSpin spin1, spin2, spin3, spin4;
     private ImageView cardimage1, cardimage2, cardimage3, cardimage4;
     private TextView cardResult;
+    private TextView scoreCounter;
 
     public static final Random RANDOM = new Random();
 
@@ -36,6 +41,7 @@ public class CardGameActivity extends AppCompatActivity {
         counter = new Counter();
         button = (Button) findViewById(R.id.cardGoButton);
         cardResult = (TextView) findViewById(R.id.cardResult);
+        scoreCounter = (TextView) findViewById(R.id.scoreCounter);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -52,10 +58,14 @@ public class CardGameActivity extends AppCompatActivity {
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex) {
                         cardResult.setText("Congratulations! you matched all 4! You Win £4!");
+                        counter.increaseByFive();
+                        scoreCounter.setText(counter.getWinnings().toString());
                         // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex) {
                         cardResult.setText("So Close! Three Correct! You Win £3");
+                        counter.increaseByThree();
+                        scoreCounter.setText(counter.getWinnings().toString());
                         // enter counter here to tally 3 onto the score
                     } else {
                         cardResult.setText("You didnt manage to match three suits, try again!");
@@ -133,6 +143,7 @@ public class CardGameActivity extends AppCompatActivity {
 
         });
     }
+
 
 
 }

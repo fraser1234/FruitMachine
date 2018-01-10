@@ -106,25 +106,29 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="111dp"
+        android:layout_height="63dp"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="1dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
         android:onClick="onClick"
         android:text="Go!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintHorizontal_bias="0.998"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button2"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_height="61dp"
+        android:layout_margin="2dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -140,8 +144,10 @@
 
     <Button
         android:id="@+id/button3"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_height="61dp"
+        android:layout_margin="2dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -157,8 +163,10 @@
 
     <Button
         android:id="@+id/button4"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_height="61dp"
+        android:layout_margin="2dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -174,8 +182,10 @@
 
     <Button
         android:id="@+id/button5"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_height="61dp"
+        android:layout_margin="2dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -190,8 +200,10 @@
 
     <Button
         android:id="@+id/button6"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_height="61dp"
+        android:layout_margin="2dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
