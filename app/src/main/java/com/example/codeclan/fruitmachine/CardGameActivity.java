@@ -58,11 +58,13 @@ public class CardGameActivity extends AppCompatActivity {
 
                     if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex) {
                         cardResult.setText("Congratulations! you matched all 4! You Win £4!");
-                        counter.increaseByFive();
+                        counter.increaseByFour();
                         scoreCounter.setText(counter.getWinnings().toString());
                         // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
-                            || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex) {
+                            || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
+                            || spin1.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
+                            || spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin4.currentIndex) {
                         cardResult.setText("So Close! Three Correct! You Win £3");
                         counter.increaseByThree();
                         scoreCounter.setText(counter.getWinnings().toString());
@@ -71,7 +73,7 @@ public class CardGameActivity extends AppCompatActivity {
                         cardResult.setText("You didnt manage to match three suits, try again!");
                     }
 
-                    button.setText("Go!");
+                    button.setText("DEAL");
 
                     gameStarted = false;
 
@@ -135,7 +137,7 @@ public class CardGameActivity extends AppCompatActivity {
                     spin4.start();
 
 
-                    button.setText("Stop");
+                    button.setText("Show Hand");
                     gameStarted = true;
 
                 }

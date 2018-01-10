@@ -27,6 +27,7 @@
 
     <Button
         android:id="@+id/fruitMachineButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="160dp"
         android:layout_height="78dp"
         android:layout_marginBottom="8dp"
@@ -43,6 +44,7 @@
 
     <Button
         android:id="@+id/cardMachineButton"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="160dp"
         android:layout_height="78dp"
         android:layout_marginBottom="8dp"
@@ -59,15 +61,15 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="246dp"
-        android:layout_height="45dp"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Welcome to the Slots!"
         android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
