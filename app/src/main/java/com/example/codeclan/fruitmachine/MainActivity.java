@@ -1,5 +1,6 @@
 package com.example.codeclan.fruitmachine;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         images4 = (ImageView) findViewById(R.id.images4);
         images5 = (ImageView) findViewById(R.id.images5);
         counter = new Counter();
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
 
 
 
