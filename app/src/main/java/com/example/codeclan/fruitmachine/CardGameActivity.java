@@ -1,6 +1,7 @@
 package com.example.codeclan.fruitmachine;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,6 +43,7 @@ public class CardGameActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.cardGoButton);
         cardResult = (TextView) findViewById(R.id.cardResult);
         scoreCounter = (TextView) findViewById(R.id.scoreCounter);
+        final MediaPlayer dingSound = MediaPlayer.create(this, R.raw.dingding);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -60,6 +62,7 @@ public class CardGameActivity extends AppCompatActivity {
                         cardResult.setText("Congratulations! you matched all 4! You Win £4!");
                         counter.increaseByFour();
                         scoreCounter.setText(counter.getWinnings().toString());
+                        dingSound.start();
                         // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
@@ -68,6 +71,7 @@ public class CardGameActivity extends AppCompatActivity {
                         cardResult.setText("So Close! Three Correct! You Win £3");
                         counter.increaseByThree();
                         scoreCounter.setText(counter.getWinnings().toString());
+                        dingSound.start();
                         // enter counter here to tally 3 onto the score
                     } else if (spin1.currentIndex == spin2.currentIndex
                             || spin3.currentIndex == spin4.currentIndex
@@ -78,6 +82,7 @@ public class CardGameActivity extends AppCompatActivity {
                         cardResult.setText("So Close! Two Correct! You Win £2");
                         counter.increaseByTwo();
                         scoreCounter.setText(counter.getWinnings().toString());
+                        dingSound.start();
                     }
                     else {
                         cardResult.setText("You didnt manage to match three suits, try again!");
