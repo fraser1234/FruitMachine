@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         Animation anim = new AlphaAnimation(0.0f, 1.0f);
-        anim.setDuration(100); //You can manage the time of the blink with this parameter
+        anim.setDuration(100);
         anim.setStartOffset(20);
         anim.setRepeatMode(Animation.REVERSE);
         anim.setRepeatCount(Animation.INFINITE);
