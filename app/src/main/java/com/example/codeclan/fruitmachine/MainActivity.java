@@ -1,6 +1,7 @@
 package com.example.codeclan.fruitmachine;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         images4 = (ImageView) findViewById(R.id.images4);
         images5 = (ImageView) findViewById(R.id.images5);
         counter = new Counter();
+        final MediaPlayer moneySound = MediaPlayer.create(this, R.raw.moneysound);
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
@@ -158,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     spin5.start();
 
                     button.setText("Stop");
+                    moneySound.start();
                     gameStarted = true;
 
                 }
