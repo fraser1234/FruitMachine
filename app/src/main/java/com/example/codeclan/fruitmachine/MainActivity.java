@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,8 +47,17 @@ public class MainActivity extends AppCompatActivity {
         images5 = (ImageView) findViewById(R.id.images5);
         counter = new Counter();
         final MediaPlayer moneySound = MediaPlayer.create(this, R.raw.moneysound);
+        final MediaPlayer jackpotWinner = MediaPlayer.create(this, R.raw.jackpotwinner);
+        final MediaPlayer coins = MediaPlayer.create(this, R.raw.smalljackpotcoins);
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(100); //You can manage the time of the blink with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        result.startAnimation(anim);
+
 
 
 
@@ -64,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         result.setText("Congratulations! you matched all 5! You Win £5!");
                         counter.increaseByFive();
                         scoreCounter.setText(counter.getWinnings().toString());
+                        jackpotWinner.start();
                         // enter the counter here so that it can tally the amount mamde in each game
                     } else if (spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin3.currentIndex
                             || spin2.currentIndex == spin3.currentIndex && spin3.currentIndex == spin4.currentIndex
@@ -77,7 +89,9 @@ public class MainActivity extends AppCompatActivity {
                             || spin1.currentIndex == spin2.currentIndex && spin2.currentIndex == spin4.currentIndex) {
                         result.setText("So Close! Three Correct! You Win £3");
                         counter.increaseByThree();
-                        scoreCounter.setText(counter.getWinnings().toString());// enter counter here to tally 3 onto the score
+                        scoreCounter.setText(counter.getWinnings().toString());
+                        jackpotWinner.start();
+                        // enter counter here to tally 3 onto the score
                     } else {
                         result.setText("You didnt manage to match three fruits, try again!");
                     }
@@ -160,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                     spin5.start();
 
                     button.setText("Stop");
-                    moneySound.start();
+
                     gameStarted = true;
 
                 }

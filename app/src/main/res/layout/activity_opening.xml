@@ -15,7 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Select a game to play from the options below:"
+        android:text="Select a game from the options below:"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -61,8 +61,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
+        android:layout_width="279dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

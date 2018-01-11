@@ -21,6 +21,11 @@ public class Counter {
         return this.getWinnings();
     }
 
+    public int increaseByTwo() {
+        winnings += 2;
+        return this.getWinnings();
+    }
+
     public int increaseByThree() {
         winnings += 3;
         return this.getWinnings();

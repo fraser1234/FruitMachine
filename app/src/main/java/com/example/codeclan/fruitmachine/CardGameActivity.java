@@ -69,7 +69,17 @@ public class CardGameActivity extends AppCompatActivity {
                         counter.increaseByThree();
                         scoreCounter.setText(counter.getWinnings().toString());
                         // enter counter here to tally 3 onto the score
-                    } else {
+                    } else if (spin1.currentIndex == spin2.currentIndex
+                            || spin3.currentIndex == spin4.currentIndex
+                            || spin1.currentIndex == spin4.currentIndex
+                            || spin2.currentIndex == spin3.currentIndex
+                            || spin1.currentIndex == spin3.currentIndex
+                            || spin2.currentIndex == spin4.currentIndex){
+                        cardResult.setText("So Close! Two Correct! You Win £2");
+                        counter.increaseByTwo();
+                        scoreCounter.setText(counter.getWinnings().toString());
+                    }
+                    else {
                         cardResult.setText("You didnt manage to match three suits, try again!");
                     }
 
